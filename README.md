@@ -32,7 +32,7 @@
 - Móvil vertical (no hace falta landscape)
 
 ### 7. Layout
-- Usar al 1n veces estas etiquetas: `<main>`, `<header>`, `<nav>`, `<aside>`, `<section>`, `<article>`, `<footer>`
+- Usar 1n veces estas etiquetas: `<main>`, `<header>`, `<nav>`, `<aside>`, `<section>`, `<article>`, `<footer>`
 
 ### 8. Tabla
 - Al menos 1
