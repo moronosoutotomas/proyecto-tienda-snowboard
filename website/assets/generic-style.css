@@ -4,6 +4,11 @@ tipografía (ya la tienes descargada)
 iconos (tb descargados)
  */
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 :root {
   font-family: 'Open Sans', sans-serif;
@@ -24,8 +29,11 @@ iconos (tb descargados)
   /* resalte secundario */
   --gold-metallic: #d2b02aff;
 
-  /* sombra */
+  /* sombras */
   --sombra: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+  /* bordes */
+  --borde: 0.5em;
 
   /* fueguito */
   --fire: 🔥;
@@ -73,7 +81,7 @@ nav {
   }
 
   .slice {
-    font-size: 48px;
+    font-size: 3em;
     font-weight: bold;
     letter-spacing: -2px;
     line-height: 1;
@@ -109,7 +117,7 @@ nav {
   }
 
   /* Estilos para el logo en modo oscuro */
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     .sl {
       color: #5dade2;
     }
@@ -125,7 +133,7 @@ nav {
     .snowboard {
       color: #bdc3c7;
     }
-  }
+  } */
 }
 
 
@@ -178,26 +186,29 @@ body {
   }
 
   .menu-icon span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 2px 0;
+    width: 3em;
+    height: 4px;
+    background-color: black;
+    margin: 5px 1em;
     transition: 0.4s;
   }
 
   .menu {
+    /* OJO cuando se clica pasa a ser flex */
     display: none;
     flex-direction: column;
+
     position: absolute;
     top: 100%;
     right: 3px;
-    background-color: #333;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
-    overflow: hidden;
     padding: 0;
+    z-index: 1;
+    overflow: hidden;
+    min-width: 300px;
+
+    background-color: var(--columbia-blue);
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
 
     animation: fadeIn 0.5s ease-in-out;
   }
@@ -213,9 +224,9 @@ body {
   }
 
   .menu li a {
-    color: white;
+    color: var(--delft-blue);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.5em;
     display: block;
     padding: 12px 16px;
     transition: background-color 0.3s;
@@ -224,13 +235,14 @@ body {
   }
 
   .menu li a:hover {
-    background-color: #444;
+    color: white;
+    background-color: var(--lapis-lazuli);
   }
 
 
   /* Animación del icono hamburguesa */
   .menu-icon.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-10px, 10px);
   }
 
   .menu-icon.active span:nth-child(2) {
@@ -238,7 +250,7 @@ body {
   }
 
   .menu-icon.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-10px, -10px);
   }
 }
 
@@ -250,13 +262,61 @@ body {
 */
 
 body {
+  display: flex;
+  flex-flow: column wrap;
   background-color: var(--columbia-blue);
   padding: 0.5em;
+  width: 100%;
+  gap: 0.5em;
 }
 
-
-
-footer {
+header {
+  width: 100%;
   background-color: white;
   box-shadow: var(--sombra);
+  border-radius: var(--borde);
+
+  nav {
+    width: 100%;
+  }
+}
+
+/* LOOK vas por aqui */
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
+
+  section {
+    width: 100%;
+    height: 800px;
+    background: url(../img/stock/snowy-montainious-valley.jpg) var(--lapis-lazuli);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  border-radius: var(--borde);
+  background-color: white;
+  box-shadow: var(--sombra);
+
+  .metodos-pago {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    padding-top: 1em;
+  }
+
+  .copyright {
+    padding-bottom: 1em;
+  }
 }
