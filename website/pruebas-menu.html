@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Responsive</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .menu-icon span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 2px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 3px;
+      background-color: #333;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 0;
+
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .menu li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      display: block;
+      padding: 12px 16px;
+      transition: background-color 0.3s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .menu li a:hover {
+      background-color: #444;
+    }
+
+
+    /* Animación del icono hamburguesa */
+    .menu-icon.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .menu-icon.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <div class="slice">
+          <span class="sl">Sl</span><span class="ice">ice</span>
+        </div>
+        <div class="snowboard">Snowboard</div>
+      </div>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    document.querySelector('.menu-icon').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.querySelector('.menu').classList.toggle('active');
+    });
+
+  </script>
+</body>
+
+</html>

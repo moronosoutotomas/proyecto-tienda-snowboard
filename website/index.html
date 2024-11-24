@@ -7,31 +7,83 @@
   <meta author="Tomás Moroño Souto">
   <title>Slice snowboard - Tu tienda de snowboard de confianza</title>
 
-  <!-- Hoja con el global-reset -->
-  <link rel="stylesheet" href="assets/global-reset.css">
+  <!-- Global-reset (el mismo normalize usado en clase) -->
+  <link rel="stylesheet" href="./assets/global-reset.css">
 
-  <!-- Hoja con mis estilos generales -->
-  <link rel="stylesheet" href="assets/generic-styles.css">
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="./assets/generic-style.css">
 
-  <!-- Hoja con estilos específicos -->
-  <link rel="stylesheet" href="assets/index-styles.css">
+  <!-- Estilos específicos -->
+  <link rel="stylesheet" href="./assets/index-style.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+  <!-- JS para la animación de la hamburguesa -->
+  <script src="script.js"></script>
 </head>
 
 <body>
-  <header>
-    <img src="img/logo.svg" alt="logo oficial de Slice snowboard">
 
-    <nav> <!-- Esto va a estar hidden con JS y cuando le pulses se va a mostrar (z-index + 1 sin transparencia) -->
-      <a href="./index.html">Home</a>
-      <a href="./tablas.html">Tablas</a>
-      <a href="./fijaciones.html">Fijaciones</a>
-      <a href="./botas.html">Botas</a>
-      <a href="./contacto.html">Contacto</a>
+  <!-- Ejemplo material icons -->
+  <!-- <span class="material-symbols-rounded">search</span>
+    <span class="material-symbols-rounded">home</span>
+    <span class="material-symbols-rounded">settings</span>
+    <span class="material-symbols-rounded">favourite</span> -->
+
+  <header>
+    <nav>
+      <!-- TODO: Deberías plantearte el logo en img en lugar de html/css  -->
+      <!-- <img src="img/logo.svg" alt="logo oficial de Slice snowboard"> -->
+      <div class="logo">
+        <div class="slice">
+          <span class="sl">Sl</span><span class="ice">ice</span>
+        </div>
+        <div class="snowboard">Snowboard</div>
+      </div>
+
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Esto va a estar hidden con JS y cuando le pulses se va a mostrar (z-index + 1 sin transparencia) -->
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./tablas.html">Tablas</a></li>
+        <li><a href="./fijaciones.html">Fijaciones</a></li>
+        <li><a href="./botas.html">Botas</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
     </nav>
+
+    <!-- 
+    <nav>
+      <div class="logo">
+        <div class="slice">
+          <span class="sl">Sl</span><span class="ice">ice</span>
+        </div>
+        <div class="snowboard">Snowboard</div>
+      </div>
+
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav> -->
+
   </header>
 
   <aside id="ofertas-weekend">
-    No te pierdas las ofertas del 26/27 de Octubre! CODE: 'AUTUMN-SLICE' 🔥
+    <p class="oferta">No te pierdas las ofertas del 26/27 de Diciembre! CODE: 'WINTER-SLICE' 🔥</p>
   </aside>
 
   <main>
@@ -57,7 +109,18 @@
   </main>
 
   <footer>
-
+    <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+      <image height="64" width="64" href="assets/footer-icons/64px-Google_Pay_Logo.svg.png" />
+    </svg>
+    <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+      <image height="64" width="64" href="assets/footer-icons/64px-Apple_Pay_logo.svg.png" />
+    </svg>
+    <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+      <image height="64" width="64" href="assets/footer-icons/64px-Mastercard-logo.svg.png" />
+    </svg>
+    <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+      <image height="64" width="64" href="assets/footer-icons/64px-PayPal.svg.png" />
+    </svg>
   </footer>
 
   <script src="assets/scripts.js"></script>

@@ -4,16 +4,177 @@ tipografía (ya la tienes descargada)
 iconos (tb descargados)
  */
 
-/* Variables para los colores*/
-:root {
-  /* fondo */
-  /* bordes */
-  /* fuente primaria */
-  /* fuente secundaria */
 
+:root {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
+  /* fuente primaria */
   --delft-blue: #1b304fff;
-  --lapis-lazuli: #27689eff;
-  --air-superiority-blue: #68a0c5ff;
-  --gold-metallic: #d2b02aff;
+
+  /* fondo */
   --columbia-blue: #d3e5f3ff;
+
+  /* resalte primario */
+  --lapis-lazuli: #27689eff;
+
+  /* logo */
+  --air-superiority-blue: #68a0c5ff;
+
+  /* resalte secundario */
+  --gold-metallic: #d2b02aff;
+
+  /* sombra */
+  --sombra: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+  /* fueguito */
+  --fire: 🔥;
+}
+
+
+/*
+*******
+* LOGO 
+*******
+*/
+
+.logo {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.slice {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.sl {
+  color: #3498db;
+}
+
+.ice {
+  position: relative;
+  color: #00aaff;
+}
+
+.ice::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #3498db, #00aaff);
+  z-index: -1;
+  transform: skew(-20deg);
+}
+
+.snowboard {
+  font-size: 24px;
+  color: #34495e;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* Estilos para el logo en modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .sl {
+    color: #5dade2;
+  }
+
+  .ice {
+    color: #7fccff;
+  }
+
+  .ice::after {
+    background: linear-gradient(90deg, #5dade2, #7fccff);
+  }
+
+  .snowboard {
+    color: #bdc3c7;
+  }
+}
+
+/* FIN DEL LOGO */
+
+
+/*
+******************
+* MARQUEE & FADES
+******************
+*/
+.ofertas-weekend {
+  width: 100%;
+  overflow: hidden;
+
+  /* Color de fondo opcional */
+  background: var(--lapis-lazuli);
+}
+
+.oferta {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+.elemento {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.elemento2 {
+  animation: fadeInFromBottom 1s ease-in-out;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* FIN MARQUEE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  background-color: var(--columbia-blue);
+  padding: 0.5em;
+}
+
+
+
+footer {
+  background-color: white;
+  box-shadow: var(--sombra);
 }
