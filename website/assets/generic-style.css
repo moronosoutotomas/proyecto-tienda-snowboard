@@ -1,8 +1,8 @@
-/* Aspectos generales */
 /*
-tipografía (ya la tienes descargada)
-iconos (tb descargados)
- */
+* *************** *
+* Estilos comunes *
+* *************** *
+*/
 
 * {
   box-sizing: border-box;
@@ -10,6 +10,12 @@ iconos (tb descargados)
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+
+/*
+* ********** *
+* Miscelánea *
+* ********** *
+*/
 
 :root {
   /* fuente primaria */
@@ -38,9 +44,20 @@ iconos (tb descargados)
 }
 
 /*
-************
-* KEYFRAMES
-************
+* ********** *
+* Tipografía *
+* ********** *
+*/
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(./font-open-sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+/*
+* ********* *
+* Keyframes *
+* ********* *
 */
 
 @keyframes marquee {
@@ -63,11 +80,10 @@ iconos (tb descargados)
   }
 }
 
-
 /*
-*******
-* LOGO 
-*******
+* **** *
+* Logo * 
+* **** *
 */
 nav {
   .logo {
@@ -133,11 +149,10 @@ nav {
   } */
 }
 
-
 /*
-**********
-* MARQUEE
-**********
+* ***************** *
+* Animación Marquee *
+* ***************** *
 */
 
 aside {
@@ -155,9 +170,9 @@ aside {
 }
 
 /*
-************************
-* ANIMACIÓN HAMBURGUESA
-************************
+* ********************* *
+* Animación Hamburguesa *
+* ********************* *
 */
 
 body {
@@ -177,6 +192,10 @@ body {
     flex-direction: column;
     cursor: pointer;
     z-index: 2;
+
+    /* no está pagado lo que tardé en quitar el cursor de texto de la dichosa hamburguesa */
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .menu-icon span {
@@ -185,6 +204,9 @@ body {
     background-color: black;
     margin: 5px 1em;
     transition: 0.4s ease-in-out;
+
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .menu {
@@ -250,9 +272,9 @@ body {
 
 
 /*
-********************
-* ESTILOS GENÉRICOS
-********************
+* ***************** *
+* Estilos Genéricos *
+* ***************** *
 */
 
 body {
