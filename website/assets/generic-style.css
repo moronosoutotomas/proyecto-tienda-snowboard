@@ -279,11 +279,12 @@ body {
 
 body {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100vh;
+
   background-color: var(--columbia-blue);
   padding: 0.5em;
-  width: 100%;
-  gap: 0.75em;
 }
 
 header {
@@ -382,6 +383,14 @@ aside#boton-ayuda {
   }
 }
 
+.fix {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: var(--columbia-blue);
+  /* padding: 0.5em; */
+  width: 100%;
+  gap: 0.75em;
+}
 
 footer {
   display: flex;
