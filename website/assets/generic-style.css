@@ -52,7 +52,7 @@
 /* Open Sans */
 @font-face {
   font-family: 'Open Sans';
-  font-weight: 300;
+  font-weight: 500;
   src: url(./Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
@@ -97,7 +97,7 @@ nav {
 
   .slice {
     font-size: 3em;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: -2px;
     line-height: 1;
   }
@@ -130,25 +130,6 @@ nav {
     text-transform: uppercase;
     margin-top: 5px;
   }
-
-  /* Estilos para el logo en modo oscuro */
-  /* @media (prefers-color-scheme: dark) {
-    .sl {
-      color: #5dade2;
-    }
-
-    .ice {
-      color: #7fccff;
-    }
-
-    .ice::after {
-      background: linear-gradient(90deg, #5dade2, #7fccff);
-    }
-
-    .snowboard {
-      color: #bdc3c7;
-    }
-  } */
 }
 
 /*
@@ -360,39 +341,6 @@ main {
   }
 }
 
-/* no están pagadas las horas invertidas en meter esta mierda */
-/* aside#boton-ayuda {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: end;
-  margin: 1em 0;
-
-  button {
-    background-color: var(--lapis-lazuli);
-    border: none;
-    border-radius: var(--borde);
-    color: white;
-    box-shadow: var(--sombra);
-    font-size: 1.5em;
-    font-weight: 500;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
-    padding: 0.5em;
-
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
-  button:hover {
-    transform: scale(1.1) translateX(-5px);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
-  }
-} */
-
 footer {
   display: flex;
   flex-flow: column wrap;
@@ -450,8 +398,12 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.75em;
-        font-weight: 700;
+        /* font-size: 1.75em; */
+
+        a {
+          font-size: 1.75em;
+          line-height: 2;
+        }
       }
 
       article#imagen {
