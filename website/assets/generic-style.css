@@ -49,9 +49,11 @@
 * ********** *
 */
 
+/* Open Sans */
 @font-face {
   font-family: 'Open Sans';
-  src: url(./font-open-sans/OpenSans-VariableFont_wdth\,wght.ttf);
+  font-weight: 300;
+  src: url(./Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
 /*
@@ -287,6 +289,14 @@ body {
   padding: 0.5em;
 }
 
+.fix {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: var(--columbia-blue);
+  width: 100%;
+  gap: 0.75em;
+}
+
 header {
   width: 100%;
   background-color: white;
@@ -350,7 +360,8 @@ main {
   }
 }
 
-aside#boton-ayuda {
+/* no están pagadas las horas invertidas en meter esta mierda */
+/* aside#boton-ayuda {
   display: flex;
   flex-flow: row wrap;
   justify-content: end;
@@ -369,7 +380,6 @@ aside#boton-ayuda {
 
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* no están pagadas las horas invertidas en meter esta mierda */
 
     a {
       color: white;
@@ -381,16 +391,7 @@ aside#boton-ayuda {
     transform: scale(1.1) translateX(-5px);
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
   }
-}
-
-.fix {
-  display: flex;
-  flex-flow: column wrap;
-  background-color: var(--columbia-blue);
-  /* padding: 0.5em; */
-  width: 100%;
-  gap: 0.75em;
-}
+} */
 
 footer {
   display: flex;
@@ -427,96 +428,35 @@ footer {
 @media screen and (min-width: 992px) {
 
   body {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
     padding: 0.5em 25%;
     width: 100%;
     gap: 0.75em;
   }
 
-  header {
-    width: 100%;
-
-    nav {
-      width: 100%;
-    }
-  }
-
-  aside.ofertas-weekend {
-    font-size: 1.5em;
-    padding: .5em 0;
-
-    /* sinó reasignas aqui, se rompe el aside por la derecha */
-    width: 100%;
-  }
-
-  /* TODO: vas por aqui crack, ánimo */
   main {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    width: 100%;
 
     section {
-      display: flex;
+      /* display: flex; */
       flex-flow: row wrap;
-      gap: 0.75em;
+      justify-content: space-between;
+      gap: 0 0.75em;
 
       article {
-        width: calc(96% / 3);
+        width: 32%;
         font-size: 1em;
       }
 
       article.producto {
-        padding: 1em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.75em;
+        font-weight: 700;
       }
 
       article#imagen {
         width: 100%;
-        height: 30vh;
-        background-size: cover;
-        background-repeat: no-repeat;
       }
     }
   }
-
-  aside#boton-ayuda {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: end;
-    margin: 1em 0;
-
-    button {
-      font-size: 1em;
-      font-weight: 500;
-      padding: 0.5em;
-    }
-
-    button:hover {
-      transform: scale(1.1) translateX(-5px);
-    }
-  }
-
-
-  footer {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    .metodos-pago {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-      width: 80%;
-      padding-top: 1em;
-    }
-
-    .copyright {
-      padding-bottom: 1em;
-    }
-  }
-
 }
