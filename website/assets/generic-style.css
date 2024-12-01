@@ -11,6 +11,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+
 /*
 * ********** *
 * Miscelánea *
@@ -43,6 +44,7 @@
   --fire: 🔥;
 }
 
+
 /*
 * ********** *
 * Tipografía *
@@ -55,6 +57,7 @@
   font-weight: 500;
   src: url(./Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
+
 
 /*
 * ********* *
@@ -81,6 +84,7 @@
     opacity: 1;
   }
 }
+
 
 /*
 * **** *
@@ -130,6 +134,7 @@ nav {
   }
 }
 
+
 /*
 * ***************** *
 * Animación Marquee *
@@ -149,6 +154,7 @@ aside {
     animation: marquee 20s linear infinite;
   }
 }
+
 
 /*
 * ********************* *
