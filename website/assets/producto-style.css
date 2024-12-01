@@ -1,4 +1,36 @@
 /*
+* ********** *
+* Miscelánea *
+* ********** *
+*/
+
+:root {
+  /* fuente primaria */
+  --delft-blue: #1b304fff;
+
+  /* fondo */
+  --columbia-blue: #d3e5f3ff;
+
+  /* resalte primario */
+  --lapis-lazuli: #27689eff;
+
+  /* logo */
+  --air-superiority-blue: #68a0c5ff;
+
+  /* resalte secundario */
+  --gold-metallic: #d2b02aff;
+
+  /* sombras */
+  --sombra: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+  /* bordes */
+  --borde: 0.5em;
+
+  /* fueguito */
+  --fire: 🔥;
+}
+
+/*
 * ******************** *
 * Estilos del producto *
 * ******************** *
@@ -55,13 +87,11 @@ main {
   section {
     display: flex;
     flex-flow: column nowrap;
+    gap: 1.5em;
 
     .producto {
       display: grid;
-      grid-template-areas:
-        'img img'
-        'nombre datos-producto'
-        'tallas info-envios';
+      grid-template-areas: 'img' 'datos';
       gap: 3em;
 
       background: white;
@@ -70,27 +100,95 @@ main {
 
       /* Diferentes datos del producto */
       img {
+        display: block;
         grid-area: img;
         width: 100%;
         max-width: 500px;
-        /* padding: 1em; */
+        padding: 1em;
       }
 
-      .nombre {
-        grid-area: nombre;
-        font-size: 2em;
-      }
+      .datos {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1em;
+        padding: 1em;
 
-      .datos-producto {
-        grid-area: datos-producto;
-      }
+        .nombre {
+          grid-area: nombre;
+          font-size: 2em;
+          font-weight: 700;
+        }
 
-      .tallas {
-        grid-area: tallas;
-      }
+        .datos-producto {
+          grid-area: datos-producto;
+        }
 
-      .info-envios {
-        grid-area: info-envios;
+        .tallas {
+          grid-area: tallas;
+        }
+
+        .info-envios {
+          grid-area: info-envios;
+        }
+
+        .comprar {
+          color: white;
+          font-size: 1.5em;
+          height: 2.5em;
+          border: none;
+          border-radius: var(--borde);
+          background: var(--lapis-lazuli);
+          transition: transform 0.25s ease-in-out;
+        }
+
+        .comprar:hover {
+          transform: scale(0.95);
+          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+          background-color: var(--gold-metallic);
+        }
+      }
+    }
+
+    div.guia-tallas {
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 1.5em;
+
+      background-color: white;
+      border-radius: 0.5em;
+      box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+      table.tabla-tallas {
+        border-radius: 0.5em;
+        border-collapse: collapse;
+        border: 1px solid rgb(0, 0, 0, 0.2);
+
+        thead {
+          border-radius: 0.5em;
+
+          th {
+            text-align: center;
+            color: white;
+            background-color: grey;
+            padding: 0.5em;
+          }
+        }
+
+        tbody {
+          border-radius: 0.5em;
+
+          tr {
+            td {
+              text-align: center;
+              border: 1px solid rgb(0, 0, 0, 0.2);
+              padding: 0.5em;
+            }
+          }
+
+          tr:hover {
+            background-color: lightgrey;
+          }
+        }
       }
     }
   }
@@ -164,50 +262,27 @@ footer {
   }
 
   main {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-
     section {
-      display: flex;
-      flex-flow: column nowrap;
-
       .producto {
-        display: grid;
-        grid-template-areas:
-          'img nombre'
-          'img datos-producto'
-          'img datos-producto'
-          'tallas info-envios';
-        gap: 3em;
+        grid-template-areas: 'img datos';
 
-        background: white;
-        border-radius: 0.5em;
-        box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+        .datos {
+          height: 100%;
+          gap: 3em;
+          /* justify-content: space-between; */
 
-        /* Diferentes datos del producto */
-        img {
-          grid-area: img;
-          width: 100%;
-          max-width: 500px;
-          /* padding: 1em; */
-        }
+          .datos-producto {
+            grid-area: datos-producto;
+          }
 
-        .nombre {
-          grid-area: nombre;
-          font-size: 2em;
-        }
+          .tallas {
+            grid-area: tallas;
+          }
 
-        .datos-producto {
-          grid-area: datos-producto;
-        }
+          .info-envios {
+            grid-area: info-envios;
+          }
 
-        .tallas {
-          grid-area: tallas;
-        }
-
-        .info-envios {
-          grid-area: info-envios;
         }
       }
     }
