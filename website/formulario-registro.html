@@ -56,7 +56,7 @@
       <section>
         <h2 class="titulo">Regístrate</h2>
 
-        <form action="#">
+        <form class="formulario" action="#">
           <input type="text" id="nombre" placeholder="Nombre">
           <input type="text" id="apellidos" placeholder="Apellidos">
           <select id="genero">
@@ -69,11 +69,29 @@
           <input type="email" id="email" placeholder="Correo electrónico">
           <textarea id="descripcion" placeholder="Descripción"></textarea>
 
-          <a href="./index.html">Cancelar</a>
-          <input type="submit" value="Enviar">
-        </form>
+          <!-- TOS proviene de: Términos y Condiciones de servicio -->
+          <div id="terms">
+            <input type="checkbox" id="tos">
+            <label for="tos" id="tos-label">Acepto los términos y condiciones</label>
+          </div>
 
+          <button id="cancelar"><a id="link-cancelar" href="./index.html">Cancelar</a></button>
+          <input id="enviar" type="submit" value="Enviar">
+        </form>
       </section>
+
+      <div class="newsletter">
+        <h2>Desafía lo impredecible! 🔥</h2>
+        <input type="email" id="newsletter" placeholder="direccion@correo.com">
+        <input id="submit-newsletter" type="submit" value="Enviar">
+
+        <div class="textos-newsletter">
+          <p>Recibe las últimas noticias sobre equipación y aventuras en alta montaña</p>
+          <small>* Nos comprometemos a enviar publicidad respetuosa en base a intereses una vez por
+            semana
+          </small>
+        </div>
+      </div>
     </main>
   </div><!-- END FIX -->
 

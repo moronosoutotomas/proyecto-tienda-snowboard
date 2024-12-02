@@ -80,116 +80,163 @@ aside.ofertas-weekend {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  padding: 1em;
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    'section'
+    'newsletter';
+  gap: 1em;
 
   section {
+    grid-area: section;
     display: flex;
     flex-flow: column nowrap;
+    width: 85%;
     gap: 1.5em;
+    padding: 1em;
 
-    .producto {
-      display: grid;
-      grid-template-areas: 'img' 'datos';
-      gap: 3em;
+    background: white;
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
 
-      background: white;
-      border-radius: 0.5em;
-      box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
-
-      /* Diferentes datos del producto */
-      img {
-        display: block;
-        grid-area: img;
-        width: 100%;
-        max-width: 500px;
-        padding: 1em;
-      }
-
-      .datos {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 1em;
-        padding: 1em;
-
-        .nombre {
-          grid-area: nombre;
-          font-size: 2em;
-          font-weight: 700;
-        }
-
-        .datos-producto {
-          grid-area: datos-producto;
-        }
-
-        .tallas {
-          grid-area: tallas;
-        }
-
-        .info-envios {
-          grid-area: info-envios;
-        }
-
-        .comprar {
-          color: white;
-          font-size: 1.5em;
-          height: 2.5em;
-          border: none;
-          border-radius: var(--borde);
-          background: var(--lapis-lazuli);
-          transition: transform 0.25s ease-in-out;
-        }
-
-        .comprar:hover {
-          transform: scale(0.95);
-          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
-          background-color: var(--gold-metallic);
-        }
-      }
+    .formulario *:not(input#enviar, button#cancelar, a#link-cancelar, input#tos, label#tos-label, div#terms) {
+      height: 2.5em;
+      width: 100%;
+      padding: .5em;
+      border: 1px solid rgba(0, 0, 0, 0.524);
+      border-radius: .5em;
     }
 
-    div.guia-tallas {
-      display: flex;
-      flex-flow: column nowrap;
-      padding: 1.5em;
+    .formulario {
+      display: grid;
+      grid-template-areas:
+        'nombre nombre'
+        'apellidos apellidos'
+        'genero genero'
+        'email email'
+        'descripcion descripcion'
+        'terms terms'
+        'cancelar enviar';
+      gap: .75em;
 
-      background-color: white;
-      border-radius: 0.5em;
-      box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+      input#nombre {
+        grid-area: nombre;
+      }
 
-      table.tabla-tallas {
-        border-radius: 0.5em;
-        border-collapse: collapse;
-        border: 1px solid rgb(0, 0, 0, 0.2);
+      input#apellidos {
+        grid-area: apellidos;
+      }
 
-        thead {
-          border-radius: 0.5em;
+      select#genero {
+        grid-area: genero;
+      }
 
-          th {
-            text-align: center;
-            color: white;
-            background-color: grey;
-            padding: 0.5em;
-          }
+      input#email {
+        grid-area: email;
+      }
+
+      textarea#descripcion {
+        grid-area: descripcion;
+        height: 8em;
+      }
+
+      div#terms {
+        grid-area: terms;
+        padding-left: .5em;
+
+        input#tos {
+          grid-area: tos;
         }
 
-        tbody {
-          border-radius: 0.5em;
-
-          tr {
-            td {
-              text-align: center;
-              border: 1px solid rgb(0, 0, 0, 0.2);
-              padding: 0.5em;
-            }
-          }
-
-          tr:hover {
-            background-color: lightgrey;
-          }
+        label#tos-label {
+          grid-area: tos-label;
         }
       }
+
+      a#cancelar {
+        grid-area: cancelar;
+        text-decoration: none;
+        color: black;
+      }
+
+      input#enviar {
+        grid-area: enviar;
+        border: none;
+        background: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      button#cancelar,
+      input#enviar {
+        display: block;
+        color: white;
+        font-size: 1.5em;
+        height: 2.5em;
+        border: none;
+        border-radius: var(--borde);
+        background: var(--lapis-lazuli);
+        transition: transform 0.25s ease-in-out;
+      }
+
+      button#cancelar:hover,
+      input#enviar:hover {
+        transform: scale(0.95);
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .newsletter {
+    grid-area: newsletter;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 85%;
+    gap: 1.5em;
+    padding: 1em;
+
+    color: white;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    background: url(../img/stock/blurred-background.png);
+    background-size: cover;
+
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+    input#newsletter {
+      height: 2.5em;
+      padding: .5em;
+      border: 1px solid rgba(0, 0, 0, 0.524);
+      border-radius: .5em;
+    }
+
+    input#submit-newsletter {
+      color: white;
+      background-color: var(--lapis-lazuli);
+      height: 2.5em;
+      padding: .5em;
+      border: none;
+      border-radius: .5em;
+      transition: transform 0.25s ease-in-out;
+    }
+
+    input#submit-newsletter:hover {
+      transform: scale(0.95);
+      text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    div.textos-newsletter {
+      color: black;
+      background: white;
+      opacity: 60%;
+      box-shadow: none;
+      border-radius: 0.5em;
+      padding: .5em;
     }
   }
 }
@@ -262,29 +309,55 @@ footer {
   }
 
   main {
+    /* display: grid;
+    justify-items: center;
+    grid-template-areas:
+      'section'
+      'newsletter';*/
+    gap: 2em;
+
     section {
-      .producto {
-        grid-template-areas: 'img datos';
+      display: flex;
+      flex-flow: column nowrap;
+      width: 60%;
+      gap: 1.5em;
+      padding: 1em;
 
-        .datos {
-          height: 100%;
-          gap: 3em;
-          /* justify-content: space-between; */
+      h2.titulo {
+        font-size: 2em;
+      }
 
-          .datos-producto {
-            grid-area: datos-producto;
-          }
+      .formulario *:not(input#enviar, button#cancelar, a#link-cancelar, input#tos, label#tos-label, div#terms) {
+        height: 2.5em;
+        width: 100%;
+        padding: 1em;
+      }
 
-          .tallas {
-            grid-area: tallas;
-          }
+      .formulario {
+        grid-template-areas:
+          'nombre apellidos'
+          'genero email'
+          'descripcion descripcion'
+          'terms terms'
+          'cancelar enviar';
 
-          .info-envios {
-            grid-area: info-envios;
-          }
+        textarea#descripcion {
+          height: 10em;
+        }
 
+        button#cancelar,
+        input#enviar {
+          font-size: 1.5em;
+          height: 2.5em;
         }
       }
+    }
+
+    .newsletter {
+      flex-flow: column nowrap;
+      width: 60%;
+      gap: 1.5em;
+      padding: 1em;
     }
   }
 }
