@@ -1,0 +1,290 @@
+/*
+* ********** *
+* Miscelánea *
+* ********** *
+*/
+
+:root {
+  /* fuente primaria */
+  --delft-blue: #1b304fff;
+
+  /* fondo */
+  --columbia-blue: #d3e5f3ff;
+
+  /* resalte primario */
+  --lapis-lazuli: #27689eff;
+
+  /* logo */
+  --air-superiority-blue: #68a0c5ff;
+
+  /* resalte secundario */
+  --gold-metallic: #d2b02aff;
+
+  /* sombras */
+  --sombra: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+  /* bordes */
+  --borde: 0.5em;
+
+  /* fueguito */
+  --fire: 🔥;
+}
+
+/*
+* ******************** *
+* Estilos del producto *
+* ******************** *
+*/
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 1em;
+  height: 100vh;
+
+  background-color: var(--columbia-blue);
+  padding: 0.5em;
+}
+
+.fix {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: var(--columbia-blue);
+  width: 100%;
+  gap: 0.75em;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  box-shadow: var(--sombra);
+  border-radius: var(--borde);
+
+  nav {
+    width: 100%;
+  }
+}
+
+aside.ofertas-weekend {
+  background-color: var(--lapis-lazuli);
+  border-radius: calc(var(--borde) / 2);
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: .5em 0;
+  box-shadow: var(--sombra);
+
+  /* sinó reasignas aqui, se rompe el aside por la derecha */
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+
+  section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5em;
+
+    .producto {
+      display: grid;
+      grid-template-areas: 'img' 'datos';
+      gap: 3em;
+
+      background: white;
+      border-radius: 0.5em;
+      box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+      /* Diferentes datos del producto */
+      img {
+        display: block;
+        grid-area: img;
+        width: 100%;
+        max-width: 500px;
+        padding: 1em;
+      }
+
+      .datos {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1em;
+        padding: 1em;
+
+        .nombre {
+          grid-area: nombre;
+          font-size: 2em;
+          font-weight: 700;
+        }
+
+        .datos-producto {
+          grid-area: datos-producto;
+        }
+
+        .tallas {
+          grid-area: tallas;
+        }
+
+        .info-envios {
+          grid-area: info-envios;
+        }
+
+        .comprar {
+          color: white;
+          font-size: 1.5em;
+          height: 2.5em;
+          border: none;
+          border-radius: var(--borde);
+          background: var(--lapis-lazuli);
+          transition: transform 0.25s ease-in-out;
+        }
+
+        .comprar:hover {
+          transform: scale(0.95);
+          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+          background-color: var(--gold-metallic);
+        }
+      }
+    }
+
+    div.guia-tallas {
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 1.5em;
+
+      background-color: white;
+      border-radius: 0.5em;
+      box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+      table.tabla-tallas {
+        border-radius: 0.5em;
+        border-collapse: collapse;
+        border: 1px solid rgb(0, 0, 0, 0.2);
+
+        thead {
+          border-radius: 0.5em;
+
+          th {
+            text-align: center;
+            color: white;
+            background-color: grey;
+            padding: 0.5em;
+          }
+        }
+
+        tbody {
+          border-radius: 0.5em;
+
+          tr {
+            td {
+              text-align: center;
+              border: 1px solid rgb(0, 0, 0, 0.2);
+              padding: 0.5em;
+            }
+          }
+
+          tr:hover {
+            background-color: lightgrey;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  border-radius: var(--borde);
+  background-color: white;
+  box-shadow: var(--sombra);
+
+  .metodos-pago {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    padding-top: 1em;
+  }
+
+  .copyright {
+    padding: 0 1em 1em;
+    padding-bottom: 1em;
+  }
+}
+
+
+/*
+* ******************** *
+* Dispositivos grandes *
+*   Mayores que 768px  *
+* ******************** *
+*/
+
+@media screen and (min-width: 768px) {
+
+  body {
+    width: 100%;
+    gap: 0.75em;
+    padding: 0;
+  }
+
+  header,
+  aside.ofertas-weekend,
+  footer {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  header {
+    nav {
+      div.menu-icon {
+        display: none;
+      }
+
+      ul.menu {
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+
+        border-radius: 0;
+        box-shadow: none;
+
+      }
+    }
+  }
+
+  main {
+    section {
+      .producto {
+        grid-template-areas: 'img datos';
+
+        .datos {
+          height: 100%;
+          gap: 3em;
+          /* justify-content: space-between; */
+
+          .datos-producto {
+            grid-area: datos-producto;
+          }
+
+          .tallas {
+            grid-area: tallas;
+          }
+
+          .info-envios {
+            grid-area: info-envios;
+          }
+
+        }
+      }
+    }
+  }
+}
