@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta author="Tomás Moroño Souto">
+  <meta name="author" content="Tomás Moroño Souto">
   <title>Slice snowboard - Regístrate</title>
 
   <!-- Global-reset (el mismo normalize usado en clase) -->
@@ -75,7 +75,8 @@
             <label for="tos" id="tos-label">Acepto los términos y condiciones</label>
           </div>
 
-          <button id="cancelar"><a id="link-cancelar" href="./index.html">Cancelar</a></button>
+          <!-- Error: "The element a must not appear as a descendant of the button element." -->
+          <button id="cancelar"><!-- <a id="link-cancelar" href="./index.html">Cancelar</a> -->Cancelar</button>
           <input id="enviar" type="submit" value="Enviar">
         </form>
       </section>
