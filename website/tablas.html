@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Tomás Moroño Souto">
-  <title>Slice snowboard - Tu tienda de snowboard de confianza</title>
+  <title>Slice snowboard - Catálogo</title>
 
   <!-- Global-reset (el mismo normalize usado en clase) -->
   <link rel="stylesheet" href="./assets/global-reset.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/generic-style.css">
 
   <!-- Estilos específicos -->
-  <link rel="stylesheet" href="./assets/index-style.css">
+  <link rel="stylesheet" href="./assets/fijaciones-style.css">
 
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
@@ -24,11 +24,6 @@
 </head>
 
 <body>
-
-  <!-- Ejemplo material icons -->
-  <!-- <span class="material-symbols-rounded">search</span>
-  <span class="material-symbols-rounded">settings</span>
-  <span class="material-symbols-rounded">favourite</span> -->
 
   <div class="fix"><!-- FIX para dejar el footer abajo del todo -->
     <header>
@@ -62,48 +57,77 @@
 
     <main>
       <section>
-        <article id="imagen">
-          <img src="img/stock/snowboarder-protective-glasses-holding-his-snowboard-his-back.jpg"
-            alt="persona portando tabla de snowboard">
-          <h1 class="titulo">No te pierdas nuestras ofertas!</h1>
-        </article>
 
-        <div class="productos">
-          <article class="producto">
-            <a href="tablas.html">
-              <img src="img/salomon-assassin-pro/1.png" alt="tabla">
-              <h2>Salomon Assasin</h2>
-            </a>
-          </article>
+        <!-- Producto individual -->
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-assassin-pro/1.png" alt="salomon-pact">
 
-          <article class="producto">
-            <a href="botas.html">
-              <img src="img/salomon-dialogue-lace/12.png" alt="botas">
-              <h2>Salomon Dialogue</h2>
-            </a>
-          </article>
-
-          <article class="producto">
-            <a href="fijaciones.html">
-              <img id="putafotodemierda" src="img/salomon-pact/1.webp" alt="fijaciones">
-              <h2>Salomon Pact</h2>
-            </a>
-          </article>
+            <div class="datos">
+              <div class="nombre">Salomon Pact</div>
+              <p class="precio">199.99€</p>
+            </div>
+          </a>
         </div>
+        <!-- Fin producto individual -->
+
+        <!-- OJO: de aqui en adelante son todos copias del primero (con otros nombres) -->
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-assassin-pro/1.png" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Union Flite Pro</div>
+              <p class="precio">179.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-assassin-pro/1.png" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Burton Mission</div>
+              <p class="precio">169.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-assassin-pro/1.png" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Nickdecker Nexus</div>
+              <p class="precio">159.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-assassin-pro/1.png" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Verdad Pro</div>
+              <p class="precio">299.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-assassin-pro/1.png" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Clew Freedom</div>
+              <p class="precio">259.99€</p>
+            </div>
+          </a>
+        </div>
+
       </section>
-
-      <div class="newsletter">
-        <h2>Desafía lo impredecible! 🔥</h2>
-        <input type="email" id="newsletter" placeholder="direccion@correo.com">
-        <input id="submit-newsletter" type="submit" value="Enviar">
-
-        <div class="textos-newsletter">
-          <p>Recibe las últimas noticias sobre equipación y aventuras en alta montaña</p>
-          <small>* Nos comprometemos a enviar publicidad respetuosa en base a intereses una vez por
-            semana
-          </small>
-        </div>
-      </div>
     </main>
 
   </div><!-- END FIX -->

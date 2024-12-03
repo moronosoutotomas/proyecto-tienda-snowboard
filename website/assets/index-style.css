@@ -1,4 +1,36 @@
 /*
+* ********** *
+* Miscelánea *
+* ********** *
+*/
+
+:root {
+  /* fuente primaria */
+  --delft-blue: #1b304fff;
+
+  /* fondo */
+  --columbia-blue: #d3e5f3ff;
+
+  /* resalte primario */
+  --lapis-lazuli: #27689eff;
+
+  /* logo */
+  --air-superiority-blue: #68a0c5ff;
+
+  /* resalte secundario */
+  --gold-metallic: #d2b02aff;
+
+  /* sombras */
+  --sombra: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+  /* bordes */
+  --borde: 0.5em;
+
+  /* fueguito */
+  --fire: 🔥;
+}
+
+/*
 * ***************** *
 * Estilos Genéricos *
 * ***************** *
@@ -42,15 +74,13 @@ aside.ofertas-weekend {
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
   padding: .5em 0;
   box-shadow: var(--sombra);
-
-  /* sinó reasignas aqui, se rompe el aside por la derecha */
-  width: 100%;
 }
 
 main {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  gap: 2em;
   width: 100%;
 
   section {
@@ -71,33 +101,118 @@ main {
       }
     }
 
+    article#imagen {
+      height: 30vh;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 10%;
+        filter: blur(3px);
+      }
+
+      h1.titulo {
+        z-index: 100;
+        position: absolute;
+        top: .5em;
+        left: 2.25em;
+
+        font-size: 1.5em;
+        color: var(--lapis-lazuli);
+        text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+      }
+    }
+
     div.productos {
       display: flex;
       flex-flow: column wrap;
       gap: 0.75em;
-    }
 
-    article#imagen {
-      height: 30vh;
-      background-image: url(../img/stock/snowboarder-protective-glasses-holding-his-snowboard-his-back.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 10%;
 
-      img {
-        display: block;
+      article.producto {
+        overflow: hidden;
+
+        a {
+          text-decoration: none;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-items: center;
+          height: 100%;
+
+          img {
+            min-height: 170px;
+            width: 170px;
+            padding: .5em;
+          }
+
+          #putafotodemierda {
+            padding: 1.5em 0;
+          }
+
+          h2 {
+            text-align: center;
+          }
+        }
       }
     }
-
-    article.producto {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      padding: 1em 0;
-      text-align: center;
-    }
   }
+}
+
+.newsletter {
+  grid-area: newsletter;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 1.5em;
+  padding: 1em;
+
+  color: white;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+  background: url(../img/stock/blurred-background.png);
+  background-size: cover;
+
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+
+  input#newsletter {
+    height: 2.5em;
+    padding: .5em;
+    border: 1px solid rgba(0, 0, 0, 0.524);
+    border-radius: .5em;
+  }
+
+  input#submit-newsletter {
+    color: white;
+    background-color: var(--lapis-lazuli);
+    height: 2.5em;
+    padding: .5em;
+    border: none;
+    border-radius: .5em;
+    transition: transform 0.25s ease-in-out;
+  }
+
+  input#submit-newsletter:hover {
+    transform: scale(0.95);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  div.textos-newsletter {
+    color: black;
+    background: white;
+    opacity: 60%;
+    box-shadow: none;
+    border-radius: 0.5em;
+    padding: .5em;
+  }
+}
 }
 
 footer {
@@ -136,7 +251,6 @@ footer {
 @media screen and (min-width: 768px) {
 
   body {
-    /* padding: 0.5em 25%; */
     width: 100%;
     gap: 0.75em;
     padding: 0;
@@ -149,24 +263,6 @@ footer {
     border-radius: 0;
     box-shadow: none;
   }
-
-  /* header {
-    nav {
-      div.menu-icon {
-        display: none;
-      }
-
-      ul.menu {
-        display: flex;
-        flex-flow: row nowrap;
-        position: relative;
-
-        border-radius: 0;
-        box-shadow: none;
-
-      }
-    }
-  } */
 
   main {
     width: 75%;
@@ -186,11 +282,20 @@ footer {
           width: 31%;
 
           a {
-            font-size: 1.25em;
-            line-height: 2;
+
+            img {
+              display: block;
+              padding: .5em;
+            }
           }
         }
       }
+    }
+
+    .newsletter {
+      flex-flow: column nowrap;
+      gap: 1.5em;
+      padding: 1em;
     }
   }
 }
