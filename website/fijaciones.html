@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Tomás Moroño Souto">
-  <title>Slice snowboard - Regístrate</title>
+  <title>Slice snowboard - Catálogo</title>
 
   <!-- Global-reset (el mismo normalize usado en clase) -->
   <link rel="stylesheet" href="./assets/global-reset.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/generic-style.css">
 
   <!-- Estilos específicos -->
-  <link rel="stylesheet" href="./assets/formulario-registro.css">
+  <link rel="stylesheet" href="./assets/fijaciones-style.css">
 
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
@@ -24,6 +24,7 @@
 </head>
 
 <body>
+
   <div class="fix"><!-- FIX para dejar el footer abajo del todo -->
     <header>
       <nav>
@@ -56,46 +57,79 @@
 
     <main>
       <section>
-        <h2 class="titulo">Regístrate</h2>
 
-        <form class="formulario" action="#">
-          <input type="text" id="nombre" placeholder="Nombre">
-          <input type="text" id="apellidos" placeholder="Apellidos">
-          <select id="genero">
-            <option value="">-- Género --</option>
-            <option value="Mujer">Mujer</option>
-            <option value="Hombre">Hombre</option>
-            <option value="Prefiere no especificar">Prefiere no especificar</option>
-            <option value="Otro">Otro</option>
-          </select>
-          <input type="email" id="email" placeholder="Correo electrónico">
-          <textarea id="descripcion" placeholder="Descripción"></textarea>
+        <!-- Producto individual -->
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-pact/1.webp" alt="salomon-pact">
 
-          <!-- TOS proviene de: Términos y Condiciones de servicio -->
-          <div id="terms">
-            <input type="checkbox" id="tos">
-            <label for="tos" id="tos-label">Acepto los términos y condiciones</label>
-          </div>
-
-          <!-- Error: "The element a must not appear as a descendant of the button element." -->
-          <button id="cancelar"><!-- <a id="link-cancelar" href="./index.html">Cancelar</a> -->Cancelar</button>
-          <input id="enviar" type="submit" value="Enviar">
-        </form>
-      </section>
-
-      <div class="newsletter">
-        <h2>Desafía lo impredecible! 🔥</h2>
-        <input type="email" id="newsletter" placeholder="direccion@correo.com">
-        <input id="submit-newsletter" type="submit" value="Enviar">
-
-        <div class="textos-newsletter">
-          <p>Recibe las últimas noticias sobre equipación y aventuras en alta montaña</p>
-          <small>* Nos comprometemos a enviar publicidad respetuosa en base a intereses una vez por
-            semana
-          </small>
+            <div class="datos">
+              <div class="nombre">Salomon Pact</div>
+              <p class="precio">199.99€</p>
+            </div>
+          </a>
         </div>
-      </div>
+        <!-- Fin producto individual -->
+
+        <!-- OJO: de aqui en adelante son todos copias del primero (con otros nombres) -->
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-pact/1.webp" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Union Flite Pro</div>
+              <p class="precio">179.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-pact/1.webp" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Burton Mission</div>
+              <p class="precio">169.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-pact/1.webp" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Nickdecker Nexus</div>
+              <p class="precio">159.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-pact/1.webp" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Verdad Pro</div>
+              <p class="precio">299.99€</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="producto">
+          <a href="producto.html">
+            <img src="img/salomon-pact/1.webp" alt="salomon-pact">
+
+            <div class="datos">
+              <div class="nombre">Clew Freedom</div>
+              <p class="precio">259.99€</p>
+            </div>
+          </a>
+        </div>
+
+      </section>
     </main>
+
   </div><!-- END FIX -->
 
   <footer>

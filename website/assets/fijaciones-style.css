@@ -41,7 +41,7 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
   gap: 1em;
-  height: 100vh;
+  /* height: 100vh; */
 
   background-color: var(--columbia-blue);
   padding: 0.5em;
@@ -85,109 +85,50 @@ main {
   padding: 1em;
 
   section {
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5em;
 
     .producto {
-      display: grid;
-      grid-template-areas: 'img' 'datos';
-      gap: 3em;
-
       background: white;
       border-radius: 0.5em;
       box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
 
-      /* Diferentes datos del producto */
-      img {
-        display: block;
-        grid-area: img;
-        width: 100%;
-        min-width: 120px;
-        max-width: 170px;
-        padding: 1em;
-      }
-
-      .datos {
-        display: flex;
-        flex-flow: column nowrap;
+      a {
+        display: grid;
+        grid-template-areas: 'img datos';
         gap: 1em;
-        padding: 1em;
 
-        .nombre {
-          grid-area: nombre;
-          font-size: 2em;
-          font-weight: 700;
+        text-decoration: none;
+        color: black;
+
+        /* Diferentes datos del producto */
+        img {
+          display: block;
+          grid-area: img;
+          width: 100%;
+          min-width: 120px;
+          max-width: 170px;
+          padding: 1em;
         }
 
-        .datos-producto {
-          grid-area: datos-producto;
-        }
+        .datos {
+          display: flex;
+          flex-flow: column-reverse nowrap;
+          justify-content: center;
 
-        .tallas {
-          grid-area: tallas;
-        }
+          gap: .5em;
+          padding: 1em;
 
-        .info-envios {
-          grid-area: info-envios;
-        }
-
-        .comprar {
-          color: white;
-          font-size: 1.5em;
-          height: 2.5em;
-          border: none;
-          border-radius: var(--borde);
-          background: var(--lapis-lazuli);
-          transition: transform 0.25s ease-in-out;
-        }
-
-        .comprar:hover {
-          transform: scale(0.95);
-          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
-          background-color: var(--gold-metallic);
-        }
-      }
-    }
-
-    div.guia-tallas {
-      display: flex;
-      flex-flow: column nowrap;
-      padding: 1.5em;
-
-      background-color: white;
-      border-radius: 0.5em;
-      box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
-
-      table.tabla-tallas {
-        border-radius: 0.5em;
-        border-collapse: collapse;
-        border: 1px solid rgb(0, 0, 0, 0.2);
-
-        thead {
-          border-radius: 0.5em;
-
-          th {
-            text-align: center;
-            color: white;
-            background-color: grey;
-            padding: 0.5em;
-          }
-        }
-
-        tbody {
-          border-radius: 0.5em;
-
-          tr {
-            td {
-              text-align: center;
-              border: 1px solid rgb(0, 0, 0, 0.2);
-              padding: 0.5em;
-            }
+          .nombre {
+            grid-area: nombre;
+            font-size: 2em;
+            font-weight: 700;
           }
 
-          tr:hover {
-            background-color: lightgrey;
+          .precio {
+            grid-area: precio;
+            font-size: 2em;
           }
         }
       }
@@ -264,31 +205,24 @@ footer {
 
   main {
     section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+      width: 70%;
+
       .producto {
-        grid-template-areas: 'img datos';
+        a {
+          grid-template-areas: 'img' 'datos';
 
-        img {
-          min-width: 170px;
-          max-width: 280px;
-        }
-
-        .datos {
-          height: 100%;
-          gap: 3em;
-          /* justify-content: space-between; */
-
-          .datos-producto {
-            grid-area: datos-producto;
+          img {
+            min-width: 170px;
+            max-width: 280px;
           }
 
-          .tallas {
-            grid-area: tallas;
+          .datos {
+            height: 100%;
+            gap: 1em;
           }
-
-          .info-envios {
-            grid-area: info-envios;
-          }
-
         }
       }
     }

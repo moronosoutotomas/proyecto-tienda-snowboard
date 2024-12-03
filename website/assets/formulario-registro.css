@@ -49,7 +49,7 @@ body {
 
 .fix {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   background-color: var(--columbia-blue);
   width: 100%;
   gap: 0.75em;
@@ -309,11 +309,6 @@ footer {
   }
 
   main {
-    /* display: grid;
-    justify-items: center;
-    grid-template-areas:
-      'section'
-      'newsletter';*/
     gap: 2em;
 
     section {
@@ -340,6 +335,11 @@ footer {
           'descripcion descripcion'
           'terms terms'
           'cancelar enviar';
+
+        select#genero {
+          padding: 0;
+          padding-left: .5em;
+        }
 
         textarea#descripcion {
           height: 10em;
