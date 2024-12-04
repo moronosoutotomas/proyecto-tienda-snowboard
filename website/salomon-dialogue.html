@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Tomás Moroño Souto">
+  <title>Slice snowboard - Salomon Pact</title>
+
+  <!-- Global-reset (el mismo normalize usado en clase) -->
+  <link rel="stylesheet" href="./assets/global-reset.css">
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="./assets/generic-style.css">
+
+  <!-- Estilos específicos -->
+  <link rel="stylesheet" href="./assets/producto-style.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+  <!-- JS para la animación de la hamburguesa ('defer' lo carga de último) -->
+  <script defer src="./assets/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Ejemplo material icons -->
+  <!-- <span class="material-symbols-rounded">search</span>
+    <span class="material-symbols-rounded">home</span>
+    <span class="material-symbols-rounded">settings</span>
+    <span class="material-symbols-rounded">favourite</span> -->
+
+  <div class="fix"><!-- FIX para dejar el footer abajo del todo -->
+    <header>
+      <nav>
+        <div class="logo">
+          <div class="slice">
+            <span class="sl">Sl</span><span class="ice">ice</span>
+          </div>
+          <div class="snowboard">SNOWBOARD</div>
+        </div>
+
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./tablas.html">Tablas</a></li><!-- no existe -->
+          <li><a href="./fijaciones.html">Fijaciones</a></li>
+          <li><a href="./botas.html">Botas</a></li><!-- no existe -->
+          <li><a href="./formulario-registro.html">Regístrate</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="ofertas-weekend">
+      <p class="oferta">No te pierdas las ofertas del 20/21 de Diciembre! CODE: 'WINTER-SLICE' 🔥</p>
+    </aside>
+
+    <main>
+      <section>
+        <div class="producto">
+          <img src="img/salomon-dialogue-lace/12.png" alt="salomon-pact">
+
+          <div class="datos">
+            <div class="nombre">Salomon Dialogue Lace</div>
+            <div class="datos-producto">Botas con cordones de gama media</div>
+            <div class="tallas">Tallas disponibles: S, M, L</div>
+            <div class="info-envios">*Envíos internacionales gratuítos a partir de 49.99€</div>
+            <h2>199,99€</h2>
+            <input class="comprar" type="submit" value="Comprar">
+          </div>
+        </div>
+
+        <div class="guia-tallas">
+          <table class="tabla-tallas">
+            <thead>
+              <tr>
+                <th></th>
+                <th>EUR</th>
+                <th>UK</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>S</td>
+                <td>hasta 38</td>
+                <td>hasta 5</td>
+              </tr>
+
+              <tr>
+                <td>M</td>
+                <td>38 / 42</td>
+                <td>5 / 8</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>desde 42</td>
+                <td>desde 8</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+      </section>
+    </main>
+
+  </div><!-- END FIX -->
+
+  <footer>
+    <div class="metodos-pago">
+      <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+        <image height="64" width="64" href="assets/footer-icons/64px-Mastercard-logo.svg.png" />
+      </svg>
+
+      <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+        <image height="64" width="64" href="assets/footer-icons/64px-PayPal.svg.png" />
+      </svg>
+
+      <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+        <image height="64" width="64" href="assets/footer-icons/64px-Apple_Pay_logo.svg.png" />
+      </svg>
+
+      <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+        <image height="64" width="64" href="assets/footer-icons/64px-Google_Pay_Logo.svg.png" />
+      </svg>
+    </div>
+
+    <div class="copyright">
+      <p>MIT License - Copyright &copy; 2024-2025 by Tomás Moroño</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
