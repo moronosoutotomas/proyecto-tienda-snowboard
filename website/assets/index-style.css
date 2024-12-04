@@ -155,6 +155,25 @@ main {
           h2 {
             text-align: center;
           }
+
+          .comprar {
+            color: white;
+            font-size: 1.5em;
+            height: 1.5em;
+            margin: .5em .5em;
+            padding: 0 .5em;
+            border: none;
+            border-radius: var(--borde);
+            background: var(--lapis-lazuli);
+            transition: transform 0.25s ease-in-out;
+          }
+
+          .comprar:hover {
+            cursor: pointer;
+            transform: scale(0.95);
+            text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+            background-color: var(--gold-metallic);
+          }
         }
       }
     }
@@ -282,6 +301,14 @@ footer {
             img {
               display: block;
               padding: .5em;
+            }
+
+            /* comprar */
+            .comprar {
+              font-size: 1.5em;
+              height: 2em;
+              margin-top: .5em;
+              padding: 0 .5em;
             }
           }
         }
